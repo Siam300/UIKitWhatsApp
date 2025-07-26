@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ChatViewController: UIViewController {
 
@@ -22,6 +23,24 @@ class ChatViewController: UIViewController {
     
     @objc func editButtonTapped() {
         print("Edit button tapped.")
+
+//        do {
+//            try Auth.auth().signOut() // Firebase sign out
+//            
+//            if let nav = navigationController {
+//                nav.popViewController(animated: true)
+//            } else {
+//                dismiss(animated: true)
+//            }
+//        } catch let signOutError as NSError {
+//            print("DEBUG: Error signing out: %@", signOutError)
+//        }
+        
+        if let nav = navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
         
 //        navigationController?.popViewController(animated: true)// back action
     }
