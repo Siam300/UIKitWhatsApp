@@ -29,9 +29,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             window.rootViewController = navController
         } else {
-            let navController = UINavigationController(rootViewController: ChatViewController())
+            let tabBarVC = MainTabBarController()
+            window.rootViewController = tabBarVC
             
-            window.rootViewController = navController
+//            if let vc = storyBoard.instantiateViewController(withIdentifier: "chatView") as? ChatViewController {
+//                let navController = UINavigationController(rootViewController: vc)
+//                
+//                window.rootViewController = navController
+//            }
+            
+//            let navController = UINavigationController(rootViewController: ChatViewController())
+//            window.rootViewController = navController
         }
         
         self.window = window

@@ -37,10 +37,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc func doneTapped() {
         print("Done button tapped.")
         
-        let vc = ChatViewController()
-        
-        navigationController?.pushViewController(vc, animated: true)
+        let tabBarVC = MainTabBarController()
+        tabBarVC.modalPresentationStyle = .fullScreen
+        navigationController?.present(tabBarVC, animated: true)
     }
+    
+//    @objc func doneTapped() {
+//        print("Done button tapped.")
+//        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        if let vc = storyBoard.instantiateViewController(withIdentifier: "loginView") as? ViewController {
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
     
     @objc func rightButtonTapped() {
         print("Right button tapped.")

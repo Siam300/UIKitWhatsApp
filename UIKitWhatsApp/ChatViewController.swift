@@ -10,6 +10,12 @@ import FirebaseAuth
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var listButton: UIButton!
+    
+    @IBOutlet weak var newGroupButton: UIButton!
+    
+    @IBOutlet weak var chatTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +30,8 @@ class ChatViewController: UIViewController {
     @objc func editButtonTapped() {
         print("Edit button tapped.")
 
+        
+        //log out code
 //        do {
 //            try Auth.auth().signOut() // Firebase sign out
 //            
